@@ -69,7 +69,7 @@ DEPENDS += " \
             zlib \
           "
 
-SRCREV = "db40b2ade4b6e13d6fead7004e819325e2ea0f0b"
+SRCREV = "54be31bc5c2a52827b6c7584f51b9a083e9f3d61"
 
 # 'patch' doesn't support binary diffs
 PATCHTOOL = "git"
@@ -176,7 +176,7 @@ export PYTHON_DIR
 export TARGET_PREFIX
 
 do_configure_prepend() {
-	# Ensure 'nm' can find the lto plugins 
+	# Ensure 'nm' can find the lto plugins
 	liblto=$(find ${STAGING_DIR_NATIVE} -name "liblto_plugin.so.0.0.0")
 	mkdir -p ${STAGING_LIBDIR_NATIVE}/bfd-plugins
 	ln -sf $liblto ${STAGING_LIBDIR_NATIVE}/bfd-plugins/liblto_plugin.so
