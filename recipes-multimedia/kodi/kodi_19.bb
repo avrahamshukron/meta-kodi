@@ -3,6 +3,8 @@ SUMMARY = "Kodi Media Center"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=7b423f1c9388eae123332e372451a4f7"
 
+SRCREV = "88e186e4b9d8f4d5a16af89a68071c0710f119bf"
+
 FILESPATH =. "${FILE_DIRNAME}/kodi-19:"
 
 inherit cmake gettext python3-dir python3native systemd
@@ -69,12 +71,10 @@ DEPENDS += " \
             zlib \
           "
 
-SRCREV = "54be31bc5c2a52827b6c7584f51b9a083e9f3d61"
-
 # 'patch' doesn't support binary diffs
 PATCHTOOL = "git"
 
-PV = "19.0a1+gitr${SRCPV}"
+PV = "19.0b1+gitr${SRCPV}"
 SRC_URI = "git://github.com/xbmc/xbmc.git;protocol=https;rev=${SRCREV} \
            file://0001-Add-support-for-musl.patch \
            file://0002-Fix-file_Emu-on-musl.patch \
